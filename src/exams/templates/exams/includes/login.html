@@ -1,0 +1,23 @@
+{% block content %}
+
+<h2>{{title}}</h2>
+<p>{{instruction}}</p>
+<form method="POST" action=" /exams/ ">{% csrf_token %}
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12">
+			{{formLogin.ID}} <p></p>
+	</div>
+</div>
+
+<div></div>
+
+<p></p>
+<input class= 'btn btn-primary' type="submit" value="Login" ></input>	
+
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+</div>
+
+</form>
+
+{% endblock %}

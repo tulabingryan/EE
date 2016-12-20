@@ -1,0 +1,33 @@
+{% extends "exams/header.html" %}
+
+{% block content %}
+	<form method="POST" action=" /summary/ ">{% csrf_token %}
+		<h2>{{title}}</h2>
+			<p>{{instruction}}</p>
+			<p>{{name}}</p>
+			<p>{{id_number}}</p>
+			<p>{{accuracy}}</p>
+			<p>{{grade}}</p>
+			<p>{{list_responses}}</p>
+			<p></p>
+			<p></p>
+
+			
+			<input class= 'btn btn-primary' type="submit" value="Back" >
+				
+			</input>
+		<div class="col-xs-12 col-sm-12 col-md-12">
+		</div>
+	</form>
+
+
+{% endblock %}
+
+{% block footer%}
+	{% if status == 'logged-in' %}
+		<p><a href="/" target="">Logout</a> 
+			{# | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p> #}
+	{% else %}
+
+	{% endif %}
+{% endblock %}

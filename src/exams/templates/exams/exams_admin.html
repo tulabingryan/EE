@@ -1,0 +1,10 @@
+{% extends "exams/header.html" %}
+{% block content %}
+
+	{% for object in object_list %}
+		<h5> {{object.pk}} 
+			<a> href="/exams/{{object.id}}" {{object.pk}}</a>
+		</h5>
+	{% endfor %}
+
+{% endblock %}
